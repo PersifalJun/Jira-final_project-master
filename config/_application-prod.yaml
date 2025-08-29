@@ -1,0 +1,43 @@
+app:
+  host-url: http://localhost
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jira
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none  # Отключаем валидацию схемы
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+
+  liquibase:
+    enabled: false  # Временно отключаем миграции
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.javarush: DEBUG
+    org.springframework: DEBUG
+    org.hibernate: INFO
+  file:
+    name: /app/logs/application.log
