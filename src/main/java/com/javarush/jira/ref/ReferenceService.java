@@ -67,5 +67,5 @@ public class ReferenceService {
         Map<String, RefTo> refToMap = refTos.stream()
                 .collect(Collectors.toMap(RefTo::getCode, Function.identity()));
         refSelect.put(type, refToMap);
-    }
+     }
 }
