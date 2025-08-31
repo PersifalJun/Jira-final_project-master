@@ -48,18 +48,18 @@ spring:
         registration:
           github:
             client-id: ${OAUTH_GITHUB_CLIENT_ID}
-            client-secret: ${OAUTH_GITHUB_CLIENT_SECRET}
+            client-secret: ${OAUTH_GITHUB_CLIENT_SEC}
             scope:
               - email
           google:
             client-id: ${OAUTH_GOOGLE_CLIENT_ID}
-            client-secret: ${OAUTH_GOOGLE_CLIENT_SECRET}
+            client-secret: ${OAUTH_GOOGLE_CLIENT_SEC}
             scope:
               - email
               - profile
           gitlab:
             client-id: ${OAUTH_GITLAB_CLIENT_ID}
-            client-secret: ${OAUTH_GITLAB_CLIENT_SECRET}
+            client-secret: ${OAUTH_GITLAB_CLIENT_SEC}
             client-name: GitLab
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             authorization-grant-type: authorization_code
