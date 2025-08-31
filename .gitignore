@@ -1,5 +1,5 @@
-.env
 src/main/resources/application-secret.properties
+.env
 target
 out
 *.iml
