@@ -1,3 +1,4 @@
+.env
 src/main/resources/application-secret.properties
 target
 out
